@@ -1,0 +1,201 @@
+/* ------------------------------------------------------------------ */
+/* Landing page — hero section only                                    */
+/* ------------------------------------------------------------------ */
+
+.lh {
+    --lh-green: #4a9b78;
+    --lh-green-dark: #2d6a4f;
+    --lh-green-bg: #e6f4ee;
+    --lh-green-border: #c5e6d6;
+    --lh-red: #d64541;
+    --lh-text: #111111;
+    --lh-muted: #666666;
+    --lh-faint: #9a9a9a;
+    --lh-panel: #f7f6f3;
+    --lh-line: #e6e4de;
+
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 4rem;
+    text-align: center;
+}
+
+/* Badge */
+.lh-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 1.4rem;
+    background: var(--lh-green-bg);
+    border: 1px solid var(--lh-green-border);
+    border-radius: 999px;
+    color: var(--lh-green-dark);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.lh-badge-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--lh-green);
+}
+
+/* Headline */
+.lh-title {
+    margin: 2.2rem 0 0;
+    font-family: var(--font-body);
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: var(--lh-text);
+}
+
+.lh-title span {
+    display: block;
+    color: var(--lh-green);
+}
+
+/* Subtitle */
+.lh-subtitle {
+    max-width: 720px;
+    margin: 2rem auto 0;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--lh-muted);
+}
+
+/* Buttons */
+.lh-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 2.8rem;
+}
+
+.lh-btn {
+    display: inline-block;
+    padding: 1.15rem 2.4rem;
+    background: var(--lh-text);
+    color: #ffffff;
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.lh-btn:hover { opacity: 0.85; }
+
+/* Dashboard preview */
+.lh-dash {
+    max-width: 1000px;
+    margin: 4rem auto 0;
+    padding: 1.6rem 1.7rem 1.7rem;
+    background: var(--lh-panel);
+    border: 1px solid var(--lh-line);
+    border-radius: 24px;
+    text-align: left;
+}
+
+.lh-dots {
+    display: flex;
+    gap: 0.55rem;
+    margin-bottom: 1.2rem;
+}
+
+.lh-dots i {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+}
+
+.lh-dots i:nth-child(1) { background: #e59a9a; }
+.lh-dots i:nth-child(2) { background: #efc57a; }
+.lh-dots i:nth-child(3) { background: #a9dfc9; }
+
+.lh-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.lh-stat,
+.lh-bars {
+    background: #ffffff;
+    border: 1px solid var(--lh-line);
+    border-radius: 16px;
+}
+
+.lh-stat { padding: 1.5rem 1.6rem 1.4rem; }
+
+.lh-stat-label {
+    display: block;
+    font-size: 1.05rem;
+    color: var(--lh-faint);
+}
+
+.lh-stat-value {
+    display: block;
+    margin-top: 0.6rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--lh-text);
+}
+
+.lh-stat-note {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 1.05rem;
+    color: var(--lh-faint);
+}
+
+.lh-stat-note.up { color: var(--lh-red); }
+.lh-stat-note.good { color: var(--lh-green); }
+
+/* Category bars */
+.lh-bars {
+    margin-top: 1.2rem;
+    padding: 1.3rem 2rem 1.4rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.05rem;
+}
+
+.lh-bar-row {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.lh-bar-label {
+    text-align: right;
+    font-size: 1.1rem;
+    color: var(--lh-muted);
+}
+
+.lh-track {
+    height: 14px;
+    background: #efede7;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.lh-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.lh-fill.food   { background: #e5a23f; }
+.lh-fill.travel { background: #4a85d6; }
+.lh-fill.bills  { background: #7b6fd0; }
+
+/* Mobile */
+@media (max-width: 720px) {
+    .lh { padding-top: 3rem; }
+    .lh-subtitle { font-size: 1.15rem; }
+    .lh-stats { grid-template-columns: 1fr; }
+}
